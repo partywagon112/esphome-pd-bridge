@@ -5,7 +5,7 @@
 #include "esphome/components/i2c/i2c.h"
 
 namespace esphome {
-    namespace FUSB302B {
+    namespace fusb302b {
 
         class FUSB302B : public Component, public i2c::I2CDevice {
 
