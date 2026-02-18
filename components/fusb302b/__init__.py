@@ -29,7 +29,7 @@ async def to_code(config):
     await cg.register_component(var, config)
 
     pin = await cg.gpio_pin_expression(config[CONF_INTERRUPT_PIN])
-    cg.add(var.set_int_pin(pin))
+    cg.add(var.set_interrupt_pin(pin))
     cg.add(var.set_voltage(config[CONF_VOLTAGE]))
     
     await i2c.register_i2c_device(var, config)
