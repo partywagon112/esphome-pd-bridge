@@ -10,8 +10,6 @@ namespace esphome {
             // Constructor
         }
 
-        void FUSB302B::set_voltage(float voltage) { voltage_ = voltage; }
-
         void FUSB302B::setup() {
             // Setup code
         }
@@ -22,7 +20,8 @@ namespace esphome {
 
         void FUSB302B::dump_config() {
             ESP_LOGCONFIG(TAG, "FUSB302B:");
-            LOG_PIN("  Voltage:  ", this->voltage_);
+            ESP_LOGCONFIG(TAG, "  Voltage: %.2f ", this->voltage_)
+            LOG_PIN(this->interrupt_pin_);
         }
 
     } 

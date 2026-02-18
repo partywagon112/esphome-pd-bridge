@@ -12,8 +12,8 @@ namespace esphome {
         public:
             FUSB302B();
             
-            void set_int_pin(InternalGPIOPin *int_pin) { int_pin_ = int_pin; }
-            void set_voltage(float voltage);
+            void set_interrupt_pin(InternalGPIOPin *interrupt_pin) { interrupt_pin_ = interrupt_pin; }
+            void set_voltage(float voltage) { voltage_ = voltage; }
             
             void setup() override;
             // void update() override;
@@ -22,7 +22,7 @@ namespace esphome {
         protected:
             float voltage_;
 
-            InternalGPIOPin *int_pin_;
+            InternalGPIOPin *interrupt_pin_;
         };
 
     }
