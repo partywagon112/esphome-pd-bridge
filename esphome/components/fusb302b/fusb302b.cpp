@@ -1,5 +1,5 @@
 #include "esphome/core/log.h"
-#include "my_external_component.h"
+#include "fusb302b.h"
 
 namespace esphome {
 namespace my_external_component {
