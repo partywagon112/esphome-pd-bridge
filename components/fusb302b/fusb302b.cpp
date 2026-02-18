@@ -6,21 +6,21 @@ namespace my_external_component {
 
 static const char *const TAG = "FUSB302B";
 
-FUSB302B::FUSB302B() {
+fusb302b::FUSB302B() {
     // Constructor
 }
 
-void FUSB302B::set_voltage(float voltage) { voltage_ = voltage; }
+void fusb302b::set_voltage(float voltage) { voltage_ = voltage; }
 
-void FUSB302B::setup() {
+void fusb302b::setup() {
     // Setup code
 }
 
-// void FUSB302B::update() {
+// void fusb302b::update() {
 //     // loop code
 // }
 
-void FUSB302B::dump_config() {
+void fusb302b::dump_config() {
     ESP_LOGCONFIG(TAG, "FUSB302B:");
     LOG_PIN("  Voltage:  ", this->voltage_);
 }
