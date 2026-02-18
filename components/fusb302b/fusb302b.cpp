@@ -16,9 +16,9 @@ void FUSB302B::setup() {
     // Setup code
 }
 
-void FUSB302B::update() {
-    // loop code
-}
+// void FUSB302B::update() {
+//     // loop code
+// }
 
 void FUSB302B::dump_config() {
     ESP_LOGCONFIG(TAG, "FUSB302B:");

@@ -16,7 +16,7 @@ namespace esphome {
             void set_voltage(float voltage);
             
             void setup() override;
-            void update() override;
+            // void update() override;
             void dump_config() override;
             
         protected:
