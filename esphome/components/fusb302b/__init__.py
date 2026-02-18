@@ -2,7 +2,7 @@ import esphome.config_validation as cv
 import esphome.codegen as cg
 from esphome.const import (
     CONF_ID,
-    CONF_FREQUENCY,
+    CONF_VOLTAGE,
 )
 
 CODEOWNERS = ["@partywagon112"]
