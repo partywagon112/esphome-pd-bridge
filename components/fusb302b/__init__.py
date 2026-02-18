@@ -19,7 +19,7 @@ FUSB302B = ns.class_("FUSB302B", cg.Component)
 
 CONFIG_SCHEMA = cv.Schema({
     cv.GenerateID(): cv.declare_id(FUSB302B),
-    i2c.i2c_device_schema(default_address=0x52)
+    i2c.i2c_device_schema(default_address=0x52),
     cv.Required(CONF_INTERRUPT_PIN): pins.internal_gpio_input_pin_schema,
     cv.Required(CONF_VOLTAGE): cv.float_
     # Schema definition, containing the options available for the component
