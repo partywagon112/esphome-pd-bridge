@@ -5,7 +5,7 @@ from esphome.const import (
     CONF_VOLTAGE,
     CONF_INTERRUPT_PIN
 )
-from esphome import pinss
+from esphome import pins
 
 CODEOWNERS = ["@partywagon112"]
 
