@@ -7,6 +7,8 @@ from esphome.const import (
 )
 from esphome import pins
 
+DEPENDENCIES = ["i2c"]
+
 CODEOWNERS = ["@partywagon112"]
 
 # C++ namespace
