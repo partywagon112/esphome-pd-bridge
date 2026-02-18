@@ -15,7 +15,7 @@ FUSB302B = ns.class_("FUSB302B", cg.Component)
 
 CONFIG_SCHEMA = cv.Schema({
     cv.GenerateID(): cv.declare_id(FUSB302B),
-    cv.Required(CONF_INTERRUPT_PIN): pin.internal_gpio_input_pin_schema,
+    cv.Required(CONF_INTERRUPT_PIN): pins.internal_gpio_input_pin_schem,
     cv.Required(CONF_VOLTAGE): cv.float_
     # Schema definition, containing the options available for the component
 }).extend(cv.COMPONENT_SCHEMA)
