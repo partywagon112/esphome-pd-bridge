@@ -3,7 +3,8 @@
 #include "esphome/core/component.h"
 #include <esphome/core/hal.h>
 #include "esphome/components/i2c/i2c.h"
-#include "pd_lib/"
+#include "pd_lib/tcpm_driver.h"
+#include "pd_lib/usb_pd.h"
 
 namespace esphome {
     namespace fusb302b {
