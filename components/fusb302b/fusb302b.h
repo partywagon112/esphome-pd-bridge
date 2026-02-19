@@ -3,6 +3,7 @@
 #include "esphome/core/component.h"
 #include <esphome/core/hal.h>
 #include "esphome/components/i2c/i2c.h"
+#include "pd_lib/"
 
 namespace esphome {
     namespace fusb302b {
@@ -16,7 +17,7 @@ namespace esphome {
             void set_voltage(float voltage) { voltage_ = voltage; }
             
             void setup() override;
-            // void update() override;
+            void loop() override;
             void dump_config() override;
             
         protected:
