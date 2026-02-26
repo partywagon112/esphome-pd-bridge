@@ -201,18 +201,6 @@ int pd_build_request(int port, uint32_t *rdo, uint32_t *ma, uint32_t *mv,
 	 * Can't give back, so set maximum current and power to operating
 	 * level.
 	 */
-	max_or_min_ma = *ma;
-	max_or_min_mw = uw / 1000;
-#endif
-
-	if ((pdo & PDO_TYPE_MASK) == PDO_TYPE_BATTERY) {
-		int mw = uw / 1000;
-		*rdo = RDO_BATT(pdo_index + 1, mw, max_or_min_mw, flags);
-	} else {
-		*rdo = RDO_FIXED(pdo_index + 1, *ma, max_or_min_ma, flags);
-	}
-	return EC_SUCCESS;
-}
 
 void pd_process_source_cap(int port, int cnt, uint32_t *src_caps)
 {

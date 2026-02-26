@@ -11,12 +11,22 @@ namespace esphome {
         }
 
         void FUSB302B::setup() {
-            // Setup code
+            tcpm_init(0);
+            delayMicroseconds(1000*50);
+            pd_init(0);
+            delayMicroseconds(1000*50);
         }
 
-        // void FUSB302B::update() {
-        //     // loop code
-        // }
+        void FUSB302B::loop() {
+            if (0 == interrupt_pin_.digitalRead()) {
+                tcpc_alert(0);
+            }
+
+            pd_run_state_machine(0);
+            // For some reason, a delay of 4 ms seems to be best
+            // My guess is that spamming the I2C bus too fast causes problems
+            delayMicroseconds(1000*4);
+        }
 
         void FUSB302B::dump_config() {
             ESP_LOGCONFIG(TAG, "FUSB302B:");
