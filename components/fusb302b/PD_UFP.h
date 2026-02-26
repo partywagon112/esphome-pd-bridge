@@ -19,7 +19,7 @@
 #include <stdint.h>
 
 // #include <Arduino.h>
-#include <Wire.h>
+// #include <Wire.h>
 // #include <HardwareSerial.h>
 
 #include "FUSB302_UFP.h"
